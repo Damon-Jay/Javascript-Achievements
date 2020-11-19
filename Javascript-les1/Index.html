@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Goedemorgen</title>
+</head>
+
+<body>
+  <h1>Tijd met javaScript</h1>
+  <input type="button" value="Klik hier voor een gratis Iphone" id= "MijnButton"/>
+  <script>
+   let MijnButton = document.getElementById('MijnButton')
+   
+   let datum = new Date();//datum is de date
+
+   MijnButton.addEventListener('click', ()=>{
+    window.alert(datum + " Ik ben Damon en je computer heeft een virus." + " Je bent gescammed");
+
+   })
+  </script>
+</body>
+</html>
