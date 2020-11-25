@@ -1,0 +1,149 @@
+<html>
+<head>
+	<style>
+	#checker-board {
+		width: 800px;
+		height: 800px;
+		background-color: #ffffff;
+		border: 10px solid rgb(0, 0, 0);
+		border-radius: 10px;
+		position: relative;
+	}
+
+	.square {
+		width: 100px;
+		height: 100px;
+		float: left;
+	}
+	.dark { background-color: rgb(0, 0, 0); }
+	.light { background-color: rgb(255, 255, 255); }
+	</style>
+</head>
+<body>
+	<div id="checker-board">
+		<div class="dark square"></div>
+		<div class="light square"></div>
+		<div class="dark square"></div>
+		<div class="light square"></div>
+		<div class="dark square"></div>
+		<div class="light square"></div>
+		<div class="dark square"></div>
+		<div class="light square"></div>
+
+		<div class="light square"></div>
+		<div class="dark square"></div>
+		<div class="light square"></div>
+		<div class="dark square"></div>
+		<div class="light square"></div>
+		<div class="dark square"></div>
+		<div class="light square"></div>
+		<div class="dark square"></div>
+
+		<div class="dark square"></div>
+		<div class="light square"></div>
+		<div class="dark square"></div>
+		<div class="light square"></div>
+		<div class="dark square"></div>
+		<div class="light square"></div>
+		<div class="dark square"></div>
+		<div class="light square"></div>
+
+		<div class="light square"></div>
+		<div class="dark square"></div>
+		<div class="light square"></div>
+		<div class="dark square"></div>
+		<div class="light square"></div>
+		<div class="dark square"></div>
+		<div class="light square"></div>
+		<div class="dark square"></div>
+
+		<div class="dark square"></div>
+		<div class="light square"></div>
+		<div class="dark square"></div>
+		<div class="light square"></div>
+		<div class="dark square"></div>
+		<div class="light square"></div>
+		<div class="dark square"></div>
+		<div class="light square"></div>
+
+		<div class="light square"></div>
+		<div class="dark square"></div>
+		<div class="light square"></div>
+		<div class="dark square"></div>
+		<div class="light square"></div>
+		<div class="dark square"></div>
+		<div class="light square"></div>
+		<div class="dark square"></div>
+
+		<div class="dark square"></div>
+		<div class="light square"></div>
+		<div class="dark square"></div>
+		<div class="light square"></div>
+		<div class="dark square"></div>
+		<div class="light square"></div>
+		<div class="dark square"></div>
+		<div class="light square"></div>
+
+		<div class="light square"></div>
+		<div class="dark square"></div>
+		<div class="light square"></div>
+		<div class="dark square"></div>
+		<div class="light square"></div>
+		<div class="dark square"></div>
+		<div class="light square"></div>
+		<div class="dark square"></div>
+
+		<div class="black checker" id="black-checker-1"></div>
+		<div class="black checker" id="black-checker-2"></div>
+		<div class="black checker" id="black-checker-3"></div>
+		<div class="black checker" id="black-checker-4"></div>
+		<div class="black checker" id="black-checker-5"></div>
+		<div class="black checker" id="black-checker-6"></div>
+		<div class="black checker" id="black-checker-7"></div>
+		<div class="black checker" id="black-checker-8"></div>
+		<div class="black checker" id="black-checker-9"></div>
+		<div class="black checker" id="black-checker-10"></div>
+		<div class="black checker" id="black-checker-11"></div>
+		<div class="black checker" id="black-checker-12"></div>
+		<div class="red checker" id="red-checker-1"></div>
+		<div class="red checker" id="red-checker-2"></div>
+		<div class="red checker" id="red-checker-3"></div>
+		<div class="red checker" id="red-checker-4"></div>
+		<div class="red checker" id="red-checker-5"></div>
+		<div class="red checker" id="red-checker-6"></div>
+		<div class="red checker" id="red-checker-7"></div>
+		<div class="red checker" id="red-checker-8"></div>
+		<div class="red checker" id="red-checker-9"></div>
+		<div class="red checker" id="red-checker-10"></div>
+		<div class="red checker" id="red-checker-11"></div>
+		<div class="red checker" id="red-checker-12"></div>
+
+	</div>
+
+	<script>
+	'use strict';
+
+	var board = document.getElementById('checker-board');
+	var redCheckers = [];
+	var blackCheckers = [];
+
+	for (var i = 1; i <= 12; i = i + 1) {
+		var redChecker = document.getElementById('red-checker-' + i);
+		var blackChecker = document.getElementById('black-checker-' + i);
+
+		var col = (i - 1) % 4;
+		var row = Math.floor((i - 1) / 4);
+
+		redChecker.style.top = 50 + 50 * row - 45;
+		redChecker.style.left = 100 + 100 * col - 95 + (row === 1 ? 50 : 0);
+
+		blackChecker.style.top = 310 - (50 * row - 45);
+		blackChecker.style.left = 100 + 100 * col - 95 + (row !== 1 ? 50 : 0);
+
+		redCheckers.push(redChecker);
+		blackCheckers.push(blackChecker);
+	}
+
+	</script>
+</body>
+</html>
