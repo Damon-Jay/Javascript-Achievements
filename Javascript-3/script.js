@@ -58,5 +58,5 @@
     const werkwoord = ["Plays", "Hates", "Makes Jokes of"];
     const restwoord = ["Call Of Duty", "Boardgames", "Videogames"];
         
-    let plaatjes = ["https://img-s-msn-com.akamaized.net/tenant/amp/entityid/BB16Ojbd.img?h=571&w=799&m=6&q=60&o=f&l=f", "https://static1.fjcdn.com/comments/These+comics+about+the+busses+and+such+they+re+_9e3f7c83c5edda875c039a9c8aa7cbd1.jpg", "https://i.redd.it/3ajwvs33hmt21.jpg", "https://media.tenor.com/images/b8802f9ae65229efd44ca81546d76bd1/tenor.gif"]
+    let plaatjes = ["https://images1.fanpop.com/images/image_uploads/Mario-Face-Distortion-super-mario-bros-847343_960_720.jpg", "https://i.redd.it/3ajwvs33hmt21.jpg", "https://media.tenor.com/images/b8802f9ae65229efd44ca81546d76bd1/tenor.gif"]
     let arrayLength = onderwerp.length;
