@@ -8,12 +8,15 @@
             value="100">
         </meter>      
         <input type="button" value="Attack" id="button">
-        <h1>..</h1>
+        <h1 id="gameover"></h1>
         
         <script>
             document.getElementById("button").addEventListener("click",(e)=>{
                 let HP = document.getElementById("HP")
                 HP.value -= 10;
+                if (HP.value == 0){
+                    document.getElementById("gameover").textContent = "gameover";
+                    }
             
                 
             
