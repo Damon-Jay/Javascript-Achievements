@@ -1,16 +1,53 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
     <head>
-        <title>Dungeon Master</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>DungeonMaster</title>
+        
     </head>
     <body>
-        <h1 id='button'></h1>
-    </body>
-    <script>
-        document.getElementById("button")
-.addEventListener("click", rollingForStats());
+        <button id="button" onClick="rollingForStats()">Klik hier om de dobbelstenen te rollen</button>
+        <p>dit zijn jou dobbel punten:</p>
+        <p id="Getal1">-</p>
+        <p id="Getal2">-</p>
+        <p id="Getal3">-</p>
+        <p id="Getal4">-</p>
+        <p>Het laagste getal is:</p>
+        <p id="laagsteGetal">-</p>
+        <p>De hoogste 3 getallen bij elkaar zijn:</p>
+        <p id="HoogsteBijElkaar">-</p>
+        <script>
+            function rollingForStats(){
+    
+    var d1 = Math.floor(Math.random() * 7) + 1;
+    var d2 = Math.floor(Math.random() * 7) + 1;
+    var d3 = Math.floor(Math.random() * 7) + 1;
+    var d4 = Math.floor(Math.random() * 7) + 1;
 
-function rollingForStats(){
-    //Jouw code hier
+    console.log(d1);
+    console.log(d2);
+    console.log(d3);
+    console.log(d4);
+
+    //hier berekenen
+
+    var numbers = [d1, d2, d3, d4]
+    console.log(numbers);
+
+    var laagste = Math.min.apply(Math, numbers);
+    console.log("laagste getal:", laagste);
+
+    var HoogsteGetallen = d1 + d2 + d3 + d4 - laagste;
+    console.log("hoogste getallen bij elkaar:", HoogsteGetallen)
+
+    document.getElementById("Getal1").innerHTML = d1;
+    document.getElementById("Getal2").innerHTML = d2;
+    document.getElementById("Getal3").innerHTML = d3;
+    document.getElementById("Getal4").innerHTML = d4;
+    document.getElementById("laagsteGetal").innerHTML = laagste;
+    document.getElementById("HoogsteBijElkaar").innerHTML = HoogsteGetallen;
 }
-    </script>
+        </script>
+    </body>
 </html>
